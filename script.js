@@ -9,8 +9,10 @@ nums.forEach((num) => {
       del();
     } else if (num.innerText === "=") {
       calculate();
+    } else if (num.innerText === "X") {
+      display.value = display.value + "*";
     } else {
-        display.value = display.value + num.innerText
+      display.value = display.value + num.innerText;
     }
   });
 });
@@ -25,6 +27,5 @@ function del() {
     .join("");
 }
 function calculate() {
-    display.value = eval(display.value)
-
+  display.value = eval(display.value);
 }
